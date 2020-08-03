@@ -2,6 +2,7 @@ source ~/.zplug/init.zsh
 
 zplug "junegunn/fzf", use:"shell/*.zsh"
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*linux*amd64*"
+zplug romkatv/powerlevel10k, as:theme, depth:1
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "softmoth/zsh-vim-mode" 
@@ -11,6 +12,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zdharma/fast-syntax-highlighting", from:github
 zplug load
 
+ZSH_THEME="powerlevel10k/powerlevel10k"
 #set -o vi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -23,7 +25,7 @@ fi
 #
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Set P10KGT background color, either 'light' or 'dark' (this should match the GNOME Terminal's theme).
 P10KGT_BACKGROUND='dark'
