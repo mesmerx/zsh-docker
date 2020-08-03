@@ -27,12 +27,12 @@ RUN rm install.sh
 WORKDIR autojump
 RUN ./install.py
 WORKDIR ..
-RUN rm -rvf autojump/ 
+RUN rm -rf autojump/ 
 
 WORKDIR zsh-docker
-RUN cp .zshrc /root/ -Rv 
-RUN cp usr/share /usr/ -Rv 
+RUN cp .zshrc /root/ -R 
+RUN cp usr/share /usr/ -R 
 WORKDIR ..
-RUN rm zsh-docker -rfv
+RUN rm zsh-docker -rf
 
 CMD ["zsh", "--version"]
