@@ -312,7 +312,6 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 alias vim="nvim"
 alias pydoc="python -m pydoc"
-source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -16,10 +16,13 @@ RUN  curl https://raw.githubusercontent.com/zplug/installer/master/installer.zsh
 RUN zsh zplugInstall
 RUN rm zplugInstall
 
+RUN curl https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh --output nvmInstall
+RUN sh nvmInstall 
+RUN rm nvmInstall
 
-RUN curl https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh --output ohmyinstall.sh
-RUN sh ohmyinstall.sh
-RUN rm ohmyinstall.sh
+RUN curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+RUN sh install.sh
+RUN rm install.sh
 
 WORKDIR autojump
 RUN ./install.py
@@ -27,8 +30,6 @@ WORKDIR ..
 RUN rm -rvf autojump/ 
 
 WORKDIR zsh-docker
-RUN mv .oh-my-zsh /root/ -v 
-RUN cp .zplug /root/ -Rv 
 RUN cp .zshrc /root/ -Rv 
 RUN cp usr/share /usr/ -Rv 
 WORKDIR ..
