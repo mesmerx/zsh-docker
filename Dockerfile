@@ -31,8 +31,9 @@ RUN rm -rf autojump/
 
 WORKDIR zsh-docker
 RUN cp .zshrc /root/ -R 
-RUN cp usr/share /usr/ -R 
+RUN cp .p10k.zsh /root/ -R 
 WORKDIR ..
 RUN rm zsh-docker -rf
+RUN zplug install
 
 CMD ["zsh", "--version"]

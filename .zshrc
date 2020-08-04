@@ -12,7 +12,6 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zdharma/fast-syntax-highlighting", from:github
 zplug load
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
 #set -o vi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
