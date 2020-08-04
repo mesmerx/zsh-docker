@@ -34,6 +34,7 @@ RUN cp .zshrc /root/ -R
 RUN cp .p10k.zsh /root/ -R 
 WORKDIR ..
 RUN rm zsh-docker -rf
-RUN zplug install
+
+RUN zsh -ic  "zplug install"
 
 CMD ["zsh", "--version"]
